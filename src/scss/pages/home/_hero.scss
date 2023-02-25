@@ -1,0 +1,69 @@
+@use '../../components/buttons';
+@use '../../components/overlay';
+@use '../../utilities/responsive';
+
+.hero {
+
+    width: 100%;
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    background-color: var(--color-dark);
+    background-size: cover;
+    background-image: linear-gradient(
+    to bottom,
+    rgba(5, 5, 5, 0.58),
+    rgba(68, 68, 68, 0.5)
+    ), url(assets/images/Hero-binary.png);
+    
+    &__inner {
+
+        // background-image:url(assets/images/Hero-binary.png);
+        background-color: transparent;
+        padding: calc(var(--section-gap) + 132px) 0 var(--section-gap) 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap-reverse;
+        grid-column: inner;
+        gap: var(--gap-xxl);
+        
+        figure {
+            margin: 0;
+        }
+
+    }
+
+    @include responsive.max(1550px) {
+        &__inner {
+            justify-content: center;
+        }
+    }
+
+    &__title {
+        padding-bottom: var(--gab-s);
+        max-width: 750px;
+    }
+
+    &__button {
+        transition: 0.5s;
+        @include buttons.default
+        
+    }
+
+    &__image {
+        display: flex;
+        max-width: 650px;
+        max-height: 544px;
+        object-fit: cover;
+        cursor: pointer;
+        transition: all 0.3s;
+        opacity: 0.64;
+        box-shadow: 5px 5px 8px var(--color-light-shadow);
+        z-index: 3;
+
+        @include overlay.default($opacity:0.3)
+
+    }
+
+
+}

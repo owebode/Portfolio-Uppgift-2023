@@ -1,0 +1,67 @@
+:root {
+
+    --section-gap: 8rem;
+    --section-gap-inner: calc( var(--section-gap) / 1.618 );
+    
+
+    --gap-xxl: 5rem;
+    --gap-xl: 4rem;
+    --gap-l: 3rem;
+    --gap-m: 2rem;
+    --gap-s: 1rem;
+
+
+    --border-radius: 0px;
+
+    --color-dark: #000;
+    --color-dark-200: #444;
+    --color-dark-300: #666;
+    --color-dark-500: #696969;
+    --color-dark-600: #999;
+    --color-dark-700: #b5b5b5;
+    --color-dark-800: #d5d5d5;
+    --color-dark-900: #f1f1f1;
+    --color-dark-shadow: rgba(0, 0, 0, 0.2);
+
+    --color-accent: hsl(39, 100%, 50%);
+    --color-accent-200: hsl(39, 91%, 45%);
+    --color-accent-300: hsl(39, 100%, 40%);
+    --color-accent-400: hsl(39, 100%, 35%);
+    --color-accent-500: hsl(39, 100%, 30%);
+    --color-accent-600: hsl(39, 100%, 25%);
+    --color-accent-700: hsl(39, 55%, 45%);
+    --color-accent-800: hsl(39, 100%, 65%);
+    --color-accent-900: hsl(39, 100%, 75%);
+    --color-accent-900: hsl(46, 32%, 90%);
+
+
+    --color-light: #ffffff;
+    --color-light-200: hsl(0, 0%, 90%);
+    --color-light-200: hsl(0, 0%, 80%);
+    --color-light-200: hsl(0, 0%, 70%);
+    --color-light-200: hsl(0, 0%, 60%);
+    --color-light-200: hsl(0, 0%, 50%);
+    --color-light-200: hsl(0, 0%, 40%);
+    --color-light-200: hsl(0, 0%, 30%);
+    --color-light-200: hsl(0, 0%, 20%);
+    --color-light-shadow: rgba(252, 252, 252, 0.2);
+
+    --font-sans: "aktiv-grotesk", sans-serif;
+    --font-sans: 'Lora', serif;
+
+    --line-height: 1.5;
+
+    --font-scale: 1.25;
+    --font-size: 1rem;
+
+    --font-size-1: var(--font-size);
+    --font-size-2: calc( var(--font-size-1) * var(--font-scale) );
+    --font-size-3: calc( var(--font-size-2) * var(--font-scale) );
+    --font-size-4: calc( var(--font-size-3) * var(--font-scale) );
+    --font-size-5: calc( var(--font-size-4) * var(--font-scale) );
+    --font-size-6: calc( var(--font-size-5) * var(--font-scale) );
+
+    --page-width: 105rem;
+    --grid-container: [full-start] minmax(32px, 1fr) [inner-start] minmax(0, var(--page-width)) [inner-end] minmax(32px, 1fr) [full-end];
+
+}

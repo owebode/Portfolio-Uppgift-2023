@@ -1,0 +1,50 @@
+@use '../utilities/responsive';
+@use '../components/overlay';
+
+.footer {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    background-color: var(--color-dark);
+
+    &__inner {
+        padding: var(--section-gap) 0;
+        color: var(--color-light);
+        line-height: 3rem;
+        font-size: var(--font-size-3);
+        grid-column: inner;
+    }
+
+    @include responsive.max(700px) {
+        &__inner {
+            padding: var(--section-gap-inner) 0;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__social {
+        padding-bottom: var(--gap-s);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__icon {
+        cursor: pointer;
+        width: 64px;
+        height: 64px;
+
+        @include overlay.default($color: var(--color-dark))
+    }
+
+    &__copyright {
+        text-align: center;
+    }
+
+}

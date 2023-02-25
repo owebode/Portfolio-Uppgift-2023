@@ -1,0 +1,63 @@
+@use '../../utilities/responsive';
+@use '../../components/overlay';
+
+.skills {
+    max-width: 100vw;
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    background-color: var(--color-dark);
+
+    &__inner {
+        grid-column: inner;
+        padding: var(--section-gap) 0;
+    }
+
+    @include responsive.max(700px) {
+        &__inner {
+            padding: var(--section-gap-inner) 0;
+        }
+    }
+
+    &__title {
+        padding: 0 0 var(--gap-xxl) 0;
+        text-align: center;
+    }
+
+    figure {
+        margin: 0;
+        @include overlay.default()
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: var(--gap-m);
+    }
+
+    &__card {
+
+        background-color: var(--color-light);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--gap-m);
+        width: 528px;
+        box-shadow: 5px 5px 8px var(--color-light-shadow);
+    
+        &__title {
+            text-align: center;
+        }
+
+        &__text {
+            text-align: center;
+            padding: 0 var(--gap-m) var(--gap-xxl);
+        }
+
+        &__image {
+            cursor: pointer;
+        }
+
+    }
+
+}

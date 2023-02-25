@@ -1,0 +1,84 @@
+@use '../utilities/responsive';
+
+.header {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    height: 132px;
+    width: 100%;
+    background-color: var(--color-dark);
+    position: fixed;
+    z-index: 500;
+    top: 0;
+    left: 0;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        grid-column: inner;
+
+    }
+}
+
+.site-menu {
+
+
+    &__list {
+        display: flex;
+        gap: var(--gap-m);
+    }
+
+    &__item {
+        list-style: none;
+    }
+
+    &__hamburger {
+        display: none;
+    }
+
+    &__hamburger span {
+        font-size: 3rem;
+    }
+
+    @include responsive.max(760px) {
+        & {
+            display: none;
+        }
+
+        &__hamburger {
+            display: block;
+        }
+    }
+
+    &--active {
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        flex-direction: column;
+        width: 33%;
+        top: 100px;
+        right: -48px;
+        background-color: var(--color-dark);
+        
+        .site-menu__list {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 var(--gap-s);
+        }
+
+        @include responsive.max(650px) {
+            & {
+                right: -32px;
+            } 
+            
+        }
+
+        @include responsive.max(550px) {
+            & {
+                right: -10px;
+            }
+        }
+    }
+
+}
